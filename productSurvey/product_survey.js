@@ -6,6 +6,10 @@ function submitFeedback() {
     const designation = document.getElementById('designation').value;
     const productType = document.getElementById('productType').value;
     const feedback = document.getElementById('feedbackText').value;
+    if (!username || !age || !email || !job || !designation || !productType || !feedback) {
+        alert("Please fill in all required fields before submitting.");
+        return;
+    }
     alert('Thank you for your valuable feedback');
     //updating hidden data
     document.getElementById('userName').innerHTML = username;
