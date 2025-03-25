@@ -36,3 +36,16 @@ function clearInputs() {
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
 }
+function deletebook(index) {
+    books.splice(index, 1);
+    showbooks();
+}
+function editbook(index) {
+    document.getElementById('bookName').value = books[index].name;
+    document.getElementById('authorName').value = books[index].authorName;
+    document.getElementById('bookDescription').value = books[index].bookDescription;
+    document.getElementById('pagesNumber').value = books[index].pagesNumber;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    deletebook(index);
+
+}
