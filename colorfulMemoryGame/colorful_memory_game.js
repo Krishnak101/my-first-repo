@@ -52,10 +52,11 @@ function checkMatch() {
         score += 2;
         scoreElement.textContent = `Score: ${score}`;
     } else {
-        card1.textContent = '?';
-        card2.textContent = '?';
-        card1.style.backgroundColor = '#ddd';
-        card2.style.backgroundColor = '#ddd';
+        selectedCards.forEach((card) => {
+            card.textContent = '?';
+            card.style.backgroundColor = '#ddd';
+        });
+
     }
     selectedCards = [];
 }
