@@ -51,6 +51,10 @@ function checkMatch() {
         card2.classList.add('matched');
         score += 2;
         scoreElement.textContent = `Score: ${score}`;
+        for (var i = 2; i < selectedCards.length; i++) {
+            selectedCards[i].textContent = '?';
+            selectedCards[i].style.backgroundColor = '#ddd';
+        }
     } else {
         selectedCards.forEach((card) => {
             card.textContent = '?';
